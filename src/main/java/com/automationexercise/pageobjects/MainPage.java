@@ -1,6 +1,6 @@
 package com.automationexercise.pageobjects;
 
-import com.automationexercise.properties.PropertyHolder;
+import com.automationexercise.utils.PropertyHolder;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

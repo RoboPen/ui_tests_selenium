@@ -1,7 +1,6 @@
 package com.automationexercise.utils;
 
 import com.automationexercise.core.factory.WebDriverFactory;
-import com.automationexercise.properties.PropertyHolder;
 import io.qameta.allure.Allure;
 import io.qameta.allure.listener.TestLifecycleListener;
 import io.qameta.allure.model.Status;

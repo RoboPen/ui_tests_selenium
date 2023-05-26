@@ -1,7 +1,7 @@
 package com.automationexercise.core.factory;
 
 import com.automationexercise.core.converters.SupportedBrowserConverter;
-import com.automationexercise.properties.PropertyHolder;
+import com.automationexercise.utils.PropertyHolder;
 import org.openqa.selenium.WebDriver;
 
 public class WebDriverFactory {

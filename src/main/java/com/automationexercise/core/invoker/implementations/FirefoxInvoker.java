@@ -2,7 +2,7 @@ package com.automationexercise.core.invoker.implementations;
 
 import com.automationexercise.core.invoker.FirefoxSetup;
 import com.automationexercise.core.invoker.WebDriverInvoker;
-import com.automationexercise.properties.PropertyHolder;
+import com.automationexercise.utils.PropertyHolder;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
