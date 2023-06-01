@@ -6,9 +6,9 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CreateAccConfirmationPage extends BasePage {
+public class CreateAccountConfirmationPage extends BasePage {
 
-    public CreateAccConfirmationPage(WebDriver driver) {
+    public CreateAccountConfirmationPage(WebDriver driver) {
         super(driver);
     }
 

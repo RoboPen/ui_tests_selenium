@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage{
-    protected LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
@@ -17,13 +17,20 @@ public class LoginPage extends BasePage{
     By emailSignupInput = By.xpath("//input[@data-qa='signup-email']");
     By signupBtn = By.xpath("//button[@data-qa='signup-button']");
 
+    By loginErrorMessage = By.xpath("//p[contains(text(), 'email or password')]");
+
     @Step("Logging in with email:{0}, password:{1}")
-    public HomePage doLogin(String email, String password){
+    public BasePage doLogin(String email, String password){
         enterTextIntoTextField(emailLoginInput, email);
         enterTextIntoTextField(passwordLoginInput, password);
         clickElement(loginBtn);
-        return new HomePage(driver);
+        if(driver.getCurrentUrl().equals("https://automationexercise.com/")){
+            return new HomePage(driver);
+        }
+        return this;
     }
+
+
 
     @Step("Navigating to signup page with name:{0}, email:{1}")
     public SignupPage doSignup(String name, String email){
@@ -31,6 +38,11 @@ public class LoginPage extends BasePage{
         enterTextIntoTextField(emailSignupInput, email);
         clickElement(signupBtn);
         return new SignupPage(driver);
+    }
+
+    @Step("Getting login error message")
+    public String getLoginErrorMessage(){
+        return findElement(loginErrorMessage).getText();
     }
 
 }

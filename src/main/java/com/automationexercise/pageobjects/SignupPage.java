@@ -1,7 +1,7 @@
 package com.automationexercise.pageobjects;
 
 import com.automationexercise.pageobjects.enums.Title;
-import com.automationexercise.pageobjects.infopages.CreateAccConfirmationPage;
+import com.automationexercise.pageobjects.infopages.CreateAccountConfirmationPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -68,7 +68,7 @@ public class SignupPage extends BasePage {
         return this;
     }
 
-    @Step("Setting up address - first name:{0}, last name{1}, address{2}, country{3}, state{4}, city{5}, zipcode{6}, phone{7}")
+    @Step("Setting up address - first name:{0}, last name:{1}, address:{2}, country:{3}, state:{4}, city:{5}, zipcode:{6}, phone:{7}")
     public SignupPage setAddress(String firstName, String lastName, String address,
                                  String country, String state, String city, String zipcode,
                                  String mobileNumber){
@@ -85,9 +85,9 @@ public class SignupPage extends BasePage {
     }
 
     @Step("Submitting registration form")
-    public CreateAccConfirmationPage submitForm(){
+    public CreateAccountConfirmationPage submitForm(){
         clickElement(createAccountBtn);
-        return new CreateAccConfirmationPage(driver);
+        return new CreateAccountConfirmationPage(driver);
     }
 
 

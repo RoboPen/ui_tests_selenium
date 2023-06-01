@@ -37,6 +37,12 @@
 
     <!-- Faker -->
     <javafaker.version>1.0.2</javafaker.version>
+
+    <!-- OpenCSV -->
+    <openCSV.version>5.7.1</openCSV.version>
+
+    <!-- Excel reader -->
+    <poi-ooxml.version>5.2.3</poi-ooxml.version>
   </properties>
 
   <dependencies>
@@ -88,6 +94,20 @@
       <artifactId>javafaker</artifactId>
       <version>${javafaker.version}</version>
     </dependency>
+
+    <!-- OpenCSV -->
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>${openCSV.version}</version>
+    </dependency>
+
+    <!-- Excel reader -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi-ooxml.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -108,9 +128,12 @@
           <argLine>
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
           </argLine>
-          <suiteXmlFiles>
-            <suiteXmlFile>${basedir}/TestNG.xml</suiteXmlFile>
-          </suiteXmlFiles>
+<!--          <suiteXmlFiles>-->
+<!--            <suiteXmlFile>${basedir}/TestNG.xml</suiteXmlFile>-->
+<!--          </suiteXmlFiles>-->
+          <groups></groups>
+          <parallel>classes</parallel>
+
         </configuration>
         <dependencies>
           <dependency>
