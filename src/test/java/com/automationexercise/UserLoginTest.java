@@ -39,7 +39,7 @@ public class UserLoginTest extends BaseTest {
        Assert.assertEquals(actualLoginErrorMessage, expectedLoginErrorMessage);
     }
 
-    @Test(groups = {"other"})
+    @Test(groups = {"smoke"})
     public void loginUser_invalidEmailGiven_shouldShowErrorMessage(){
         String username = "abc123";
         String password = "abc123";

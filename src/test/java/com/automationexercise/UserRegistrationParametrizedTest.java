@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Feature("User registration")
 public class UserRegistrationParametrizedTest extends BaseTest {
 
-    @Test(dataProvider = "registrationData",  dataProviderClass = UserRegistrationProvider.class)
+    @Test(groups = {"smoke"}, dataProvider = "registrationData",  dataProviderClass = UserRegistrationProvider.class)
     public void registerUser_validCredentialsGiven_shouldRegisterSuccessfully(UserRegistrationFormDto registrationForm) {
         Title title = registrationForm.getTitle();
         String name = registrationForm.getName();
