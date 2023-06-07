@@ -16,7 +16,7 @@ public abstract class BaseTest {
         mainPage = new MainPage(driver);
     }
 
-    @AfterTest
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();
     }
